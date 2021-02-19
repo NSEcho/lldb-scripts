@@ -14,8 +14,12 @@ $ getButtonMethod 0xdeadbeef
 [+] Method for button is ExampleController => buttonTouched:
 ```
 
+# Remotely debugging 
+
+I have already described it at my [blog - Debugging apps on jailbroken device](https://xdaemonx.github.io/debugging/) but basically you attach to the app using `debugserver` on your iPhone and then on your Mac you start lldb and connect to it and start debugging just like it was running locally.
+
 # Note
-To get full lldb experience, add following into your `.lldbinit` file:
+To get full lldb experience, add following into your `.lldbinit`(lldb config file that gets loaded when lldb is run) file:
 
 `command alias -- printSubviews expression -l objc -O -- [[[[[UIApplication sharedApplication] keyWindow] rootViewController] view] recursiveDescription]`. 
 
