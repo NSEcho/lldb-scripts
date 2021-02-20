@@ -1,8 +1,8 @@
 # Description
 
-`getButtonMethod` is a useful lldb command for reverse engineering and analyzing iOS applications. It enables you to find out what method is responsible for button and inside which controller(header file).
+Repo for my lldb scripts, you too may find them useful. They are mostly developed with iOS debugging in mind.
 
-Simply pass the memory address of button and wait for the green color.
+
 
 # Installation
 ```
@@ -10,9 +10,23 @@ $ git clone https://github.com/XdaemonX/lldb-scripts.git
 $ lldb
 ...
 (lldb) command script import /path/to/lldb-script/directory/GetButtonMethod.py
+(lldb) command script import /path/to/lldb-script/directory/GetASLR.py
 $ getButtonMethod 0xdeadbeef
 [+] Method for button is ExampleController => buttonTouched:
+$ getASLR PushKit
+[*] Offset is 0x1a2d0000
 ```
+
+# getButtonMethod
+
+
+`getButtonMethod` is a useful lldb command for reverse engineering and analyzing iOS applications. It enables you to find out what method is responsible for button and inside which controller(header file).
+
+Simply pass the memory address of button and wait for the green color.
+
+# getASLR
+
+`getASLR` command enables you to find ASLR offset for specific module. Sometimes when you want to set a breakpoint on certain memory location from disassembled binary, you can't do it directly without adding ASLR offset to it, like `address = base_address + aslr_offset`
 
 # Remotely debugging 
 
