@@ -1,5 +1,4 @@
 import lldb
-import re
 
 def __lldb_init_module(debugger, internal_dict):
     debugger.HandleCommand('command script add -f GetASLR.getOffset getASLR')
