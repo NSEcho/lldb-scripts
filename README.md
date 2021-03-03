@@ -30,7 +30,7 @@ Simply pass the memory address of button and wait for the green color.
 
 # Remotely debugging 
 
-I have already described it at my [blog - Debugging apps on jailbroken device](https://xdaemonx.github.io/debugging/) but basically you attach to the app using `debugserver` on your iPhone and then on your Mac you start lldb and connect to it and start debugging just like it was running locally.
+I have already described it at my [blog - Debugging apps on jailbroken device](https://lateralusd.github.io/debugging/) but basically you attach to the app using `debugserver` on your iPhone and then on your Mac you start lldb and connect to it and start debugging just like it was running locally.
 
 # Note
 To get full lldb experience, add following into your `.lldbinit`(lldb config file that gets loaded when lldb is run) file:
