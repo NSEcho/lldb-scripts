@@ -6,7 +6,7 @@ Repo for my lldb scripts, you too may find them useful. They are mostly develope
 
 # Installation
 ```
-$ git clone https://github.com/XdaemonX/lldb-scripts.git
+$ git clone https://github.com/lateralusd/lldb-scripts.git
 $ lldb
 ...
 (lldb) command script import /path/to/lldb-script/directory/GetButtonMethod.py
