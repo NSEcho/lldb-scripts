@@ -9,12 +9,23 @@ Repo for my lldb scripts, you too may find them useful. They are mostly develope
 $ git clone https://github.com/lateralusd/lldb-scripts.git
 $ lldb
 ...
-(lldb) command script import /path/to/lldb-script/directory/GetButtonMethod.py
-(lldb) command script import /path/to/lldb-script/directory/GetASLR.py
+(lldb) command script import /path/to/lldb-scripts/directory/GetButtonMethod.py
+(lldb) command script import /path/to/lldb-scripts/directory/GetASLR.py
+(lldb) command script import /path/to/lldb-scripts/directory/PPBlock.py
 $ getButtonMethod 0xdeadbeef
 [+] Method for button is ExampleController => buttonTouched:
 $ aslr PushKit
 [*] Offset is 0x1a2d0000
+(lldb) ppblock 0x0000000100004050
+Info for block @0x0000000100004050
+
+Body @0x0000000100003f00
+Sel @0x0000000100004030
+Sel encoding "v24@?0@\"NSString\"8@\"NSString\"16"
+Number of arguments: 2
+	Argument 0 "@\"NSString\""
+	Argument 1 "@\"NSString\""
+Return type: "v"
 ```
 
 # getButtonMethod
@@ -27,6 +38,17 @@ Simply pass the memory address of button and wait for the green color.
 # aslr
 
 `aslr` command enables you to find ASLR offset for specific module. Sometimes when you want to set a breakpoint on certain memory location from disassembled binary, you can't do it directly without adding ASLR offset to it, like `address = base_address + aslr_offset`
+
+# ppblock
+
+`ppblock` makes a bit sense of objective c blocks, it prints following information:
+
+* body of the block
+* number of arguments that the block receives
+* types of arguments
+* return type
+
+All types are in objective c encoding(e.g. `v` means `void`)
 
 # Remotely debugging 
 
