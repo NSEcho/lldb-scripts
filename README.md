@@ -59,4 +59,4 @@ To get full lldb experience, add following into your `.lldbinit`(lldb config fil
 
 `command alias -- printSubviews expression -l objc -O -- [[[[[UIApplication sharedApplication] keyWindow] rootViewController] view] recursiveDescription]`. 
 
-This will dump entire view hierarychy just like `ios ui dump` in _objection_ does or `[[UIApp keyWindow] recursiveDescription]` inside _Cycrypt_ does so you can easily find a button whose method you want to see.
+This will dump entire view hierarychy just like `ios ui dump` in _objection_ does or `[[UIApp keyWindow] recursiveDescription]` inside _Cycrypt_ does so you can easily find a button whose method you want to see or whatever you want to examine.
