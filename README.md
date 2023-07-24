@@ -5,7 +5,7 @@ Repo for my lldb scripts, you too may find them useful. They are mostly develope
 
 
 # Installation
-```
+```bash
 $ git clone https://github.com/lateralusd/lldb-scripts.git
 $ lldb
 ...
@@ -29,7 +29,6 @@ Return type: "v"
 ```
 
 # getButtonMethod
-
 
 `getButtonMethod` is a useful lldb command for reverse engineering and analyzing iOS applications. It enables you to find out what method is responsible for button and inside which controller(header file).
 
