@@ -50,7 +50,7 @@ Simply pass the memory address of button and wait for the green color.
 
 All types are in objective c encoding(e.g. `v` means `void`)
 
-# Remotely debugging 
+# Remote Debugging 
 
 I have already described it at my [blog - Debugging apps on jailbroken device](https://lateralusd.github.io/debugging/) but basically you attach to the app using `debugserver` on your iPhone and then on your Mac you start lldb and connect to it and start debugging just like it was running locally.
 
